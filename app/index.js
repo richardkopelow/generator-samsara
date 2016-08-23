@@ -1,6 +1,10 @@
 var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend({
+    init: function (){
+        this.config.app='app';
+        this.config.dist='dist';
+    },
     promptUser: function () {
         
         console.log('Making a Samsara project!');
@@ -16,7 +20,7 @@ module.exports = generators.Base.extend({
                 type: 'input',
                 name: 'description',
                 message: 'How would you describe the project?',
-                default: this.config.get('projectName') || ''
+                default: this.config.get('description') || ''
             },
             {
                 type: 'confirm',
@@ -31,5 +35,16 @@ module.exports = generators.Base.extend({
    },
    app: function(){
        this.template('app/index.html');
+       this.copy('app/src/main.js');
+       this.copy('app/src/Cube.js');
+       this.copy('app/src/requireConfig.js');
+       this.copy('app/styles/app.css');
+   },
+   framework: function(){
+       this.template('bower.json');
+       this.template('package.json');
+       this.template('grunt');
+       this.copy('Gruntfile.js');
+       this.copy('.bowerrc');
    }
 });

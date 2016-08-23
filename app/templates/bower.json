@@ -1,0 +1,21 @@
+{
+  "name": "<%= config.get('projectName') %>",
+  "description": "<%= config.get('projectDesc') %>.",
+  "main": "app/index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "samsara"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/lib"
+  ],
+  "dependencies": {
+    "requirejs": "~2.2.0"
+  }
+}

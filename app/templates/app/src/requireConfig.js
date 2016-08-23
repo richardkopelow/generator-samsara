@@ -1,6 +1,7 @@
 require.config({
     paths: {
-        famous: '../lib/samsara/samsara',
+        samsara: '../lib/samsara/samsara',
         requirejs: '../lib/requirejs/require'
     }
 });
+require(['main']);

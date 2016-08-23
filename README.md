@@ -1,2 +1,4 @@
 # generator-samsara
-Generator for boilerplate Samsara project
+Generator for the Cube example Samsara project
+
+This project is heavily influenced by generator-famous
