@@ -1,0 +1,20 @@
+{
+  "name": "generator-samsara",
+  "version": "0.1.0",
+  "author": { 
+     "name": "Richard Kopelow", 
+     "email": "richardkopelow@gmail.com" 
+   },
+  "description": "Generates a boilerplate Samsara project",
+  "main": "index.js",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  }
+}
