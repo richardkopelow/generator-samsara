@@ -19,6 +19,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "yeoman-generator": "^0.24.1"
+    "yeoman-generator": "^0.24.1",
+    "chalk": "^1.0.0",
   }
 }
