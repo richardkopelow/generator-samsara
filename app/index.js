@@ -1,4 +1,5 @@
 var generators = require('yeoman-generator');
+var chalk = require('chalk');
 
 module.exports = generators.Base.extend({
     prompting: function () {
@@ -39,6 +40,7 @@ module.exports = generators.Base.extend({
             this.copy('Gruntfile.js');
             this.copy('.bowerrc');
             this.copy('.gitignore');
+            this.template('README.md');
         },
         grunt: function(){
                 this.fs.copy(
@@ -86,9 +88,13 @@ module.exports = generators.Base.extend({
                     this.destinationPath('grunt/requirejs.js')
                     );
         }
-        },
+    },
    install: function()
    {
        this.installDependencies()
+   },
+   end: function()
+   {
+       console.log('Good to go, give it a '+chalk.green('grunt serve')+' to see it in action.');
    }
 });
