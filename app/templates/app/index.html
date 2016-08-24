@@ -4,17 +4,21 @@
         <title><%= config.get('projectName') %></title>
         
         <meta name="description" content=<%= config.get('description') %> />
-        
-        <link rel="icon" type="image/png" href="assets/favicon.png"/> 
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="icon" type="image/png" href="content/favicon.png"/> 
 
         
         <!-- build:css(app/) css/samsara.css -->
-        <link rel="stylesheet" type="text/css" href="lib/samsara/samsara/samsara.css" />
+        <link rel="stylesheet" type="text/css" href="lib/samsarajs/samsara/samsara.css" />
         <!-- endbuild -->
         <!-- build:css(app/) css/app.css -->
         <link rel="stylesheet" type="text/css" href="styles/app.css" />
         <!-- endbuild -->
         
+        <!-- build:js(app/) src/HackThing.js -->
+        <!-- endbuild -->
+
         <!-- process:remove:dev -->
         <script type="text/javascript" src="src/main.js"></script>
         <!-- /process -->

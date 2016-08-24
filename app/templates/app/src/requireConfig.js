@@ -1,7 +1,8 @@
 require.config({
     paths: {
-        samsara: '../lib/samsara/samsara',
-        requirejs: '../lib/requirejs/require'
+        samsara: '../lib/samsarajs/samsara',
+        requirejs: '../lib/requirejs/require',
+        almond: '../lib/almond/almond'
     }
 });
 require(['main']);

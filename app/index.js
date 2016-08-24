@@ -1,11 +1,7 @@
 var generators = require('yeoman-generator');
 
 module.exports = generators.Base.extend({
-    init: function (){
-        this.config.app='app';
-        this.config.dist='dist';
-    },
-    promptUser: function () {
+    prompting: function () {
         
         console.log('Making a Samsara project!');
         
@@ -21,30 +17,78 @@ module.exports = generators.Base.extend({
                 name: 'description',
                 message: 'How would you describe the project?',
                 default: this.config.get('description') || ''
-            },
-            {
-                type: 'confirm',
-                name: 'isWebApp',
-                message: 'Would you like the project to be mobile web app capable?'
-            },
+            }
         ];
         
         return this.prompt(prompts).then(function (answers){
             this.config.set(answers);
         }.bind(this));
    },
-   app: function(){
-       this.template('app/index.html');
-       this.copy('app/src/main.js');
-       this.copy('app/src/Cube.js');
-       this.copy('app/src/requireConfig.js');
-       this.copy('app/styles/app.css');
-   },
-   framework: function(){
-       this.template('bower.json');
-       this.template('package.json');
-       this.template('grunt');
-       this.copy('Gruntfile.js');
-       this.copy('.bowerrc');
+   writing: {
+        app: function(){
+            this.template('app/index.html');
+            this.copy('app/src/main.js');
+            this.copy('app/src/Cube.js');
+            this.copy('app/src/requireConfig.js');
+            this.copy('app/styles/app.css');
+            this.directory('app/content');
+        },
+        framework: function(){
+            this.template('bower.json');
+            this.template('package.json');
+            this.copy('Gruntfile.js');
+            this.copy('.bowerrc');
+            this.copy('.gitignore');
+        },
+        grunt: function(){
+                this.fs.copy(
+                    this.templatePath('grunt/aliases.js'),
+                    this.destinationPath('grunt/aliases.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/watch.js'),
+                    this.destinationPath('grunt/watch.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/connect.js'),
+                    this.destinationPath('grunt/connect.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/clean.js'),
+                    this.destinationPath('grunt/clean.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/rev.js'),
+                    this.destinationPath('grunt/rev.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/processhtml.js'),
+                    this.destinationPath('grunt/processhtml.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/useminPrepare.js'),
+                    this.destinationPath('grunt/useminPrepare.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/usemin.js'),
+                    this.destinationPath('grunt/usemin.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/htmlmin.js'),
+                    this.destinationPath('grunt/htmlmin.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/copy.js'),
+                    this.destinationPath('grunt/copy.js')
+                    );
+                this.fs.copy(
+                    this.templatePath('grunt/requirejs.js'),
+                    this.destinationPath('grunt/requirejs.js')
+                    );
+        }
+        },
+   install: function()
+   {
+       this.installDependencies()
    }
 });

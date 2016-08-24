@@ -7,6 +7,10 @@
    },
   "description": "Generates a boilerplate Samsara project",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardkopelow/generator-samsara.git"
+  },
   "files": [
     "app"
   ],

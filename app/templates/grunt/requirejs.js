@@ -9,10 +9,10 @@ module.exports =  {
       },
       baseUrl: '<%= config.app %>/src',
       mainConfigFile: '<%= config.app %>/src/requireConfig.js',
-      //name: 'almond',
+      name: 'almond',
       include: 'main',
       insertRequire: ['main'],
-      out: '<%= config.app %>/src/main.js',
+      out: '<%= config.dist %>/src/main.js',
       wrap: true
     }
   }

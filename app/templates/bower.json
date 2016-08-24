@@ -16,6 +16,8 @@
     "src/lib"
   ],
   "dependencies": {
-    "requirejs": "~2.2.0"
+    "requirejs": "~2.2.0",
+    "samsarajs": "^0.2.1",
+    "almond": "0.3.0"
   }
 }
