@@ -1,7 +1,7 @@
 # generator-samsara
 Generator for the Cube example Samsara project
 
-This project is heavily influenced by generator-famous
+This generator project is heavily influenced by generator-famous
 
 ##Getting Started
 To use this generator, make sure you have npm installed, run
@@ -28,3 +28,6 @@ yo samsara
 * Setup basic project
 * Live-reloading dev server
 * One command to package your project for deployment
+
+##Samsara
+Samsara can be found here: https://github.com/dmvaldman/samsara
