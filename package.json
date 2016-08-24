@@ -1,10 +1,10 @@
 {
   "name": "generator-samsara",
-  "version": "0.1.0",
-  "author": { 
-     "name": "Richard Kopelow", 
-     "email": "richardkopelow@gmail.com" 
-   },
+  "version": "0.1.1",
+  "author": {
+    "name": "Richard Kopelow",
+    "email": "richardkopelow@gmail.com"
+  },
   "description": "Generates a boilerplate Samsara project",
   "main": "index.js",
   "repository": {
