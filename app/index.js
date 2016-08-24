@@ -39,7 +39,7 @@ module.exports = generators.Base.extend({
             this.template('package.json');
             this.copy('Gruntfile.js');
             this.copy('.bowerrc');
-            this.copy(this.templatePath('/gitignore'),this.destinationPath('/.gitignore'));
+            this.fs.copy(this.templatePath('/gitignore'),this.destinationPath('/.gitignore'));
             this.template('README.md');
         },
         grunt: function(){
