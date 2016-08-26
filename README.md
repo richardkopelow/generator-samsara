@@ -37,13 +37,17 @@ Available generators:
 Creates the Logo example. (you might want to start here)
 
 Example:    
+```
     yo samsara
+```
 
 ##Example
 Lets the user pick from a list of the Samsara examples.
 
 Example:    
-    yo samsara:example
+```
+yo samsara:example
+```
 
 ##Features
 * Setup basic project
