@@ -7,12 +7,12 @@ module.exports =  {
           toplevel: true
         }
       },
-      baseUrl: '<%= config.app %>/src',
-      mainConfigFile: '<%= config.app %>/src/requireConfig.js',
+      baseUrl: '<%= config.app %>/js',
+      mainConfigFile: '<%= config.app %>/js/requireConfig.js',
       name: 'almond',
       include: 'main',
       insertRequire: ['main'],
-      out: '<%= config.dist %>/src/main.js',
+      out: '<%= config.dist %>/js/main.js',
       wrap: true
     }
   }

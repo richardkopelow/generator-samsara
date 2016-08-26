@@ -1,5 +1,5 @@
 # generator-samsara
-Generator for the Cube example Samsara project
+Generator for generating Samsara projects
 
 This generator project is heavily influenced by generator-famous
 
@@ -23,6 +23,27 @@ mkdir samsaraProject
 cd samsaraProject
 yo samsara
 ```
+
+
+## Generators
+Available generators:
+
+* [samsara](#app) (a.k.a. [samsara:app](#app))
+* [samsara:example](#example)
+
+**These generators must be run from the root directory of you project**
+
+##App
+Creates the Logo example. (you might want to start here)
+
+Example:    
+    yo samsara
+
+##Example
+Lets the user pick from a list of the Samsara examples.
+
+Example:    
+    yo samsara:example
 
 ##Features
 * Setup basic project

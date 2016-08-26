@@ -16,7 +16,7 @@ module.exports = function (grunt) {
       }
     },
     js: {
-      files: ['<%= config.app %>/src/**/**.js'],
+      files: ['<%= config.app %>/js/**/**.js'],
       tasks: ['lint'],
       options: {
         spawn: false,
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
       }
     },
     css: {
-      files: ['<%= config.app %>/styles/{,*/}*.css']
+      files: ['<%= config.app %>/css/{,*/}*.css']
     },
     html: {
       files: ['<%= config.app %>/{,*/}*.html'],
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
     },
     content: {
       files: [
-        '<%= config.app %>/content/**/**'
+        '<%= config.app %>/assets/**/**'
       ]
     }
   };

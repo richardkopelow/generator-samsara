@@ -13,7 +13,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "src/lib"
+    "js/lib"
   ],
   "dependencies": {
     "requirejs": "~2.2.0",

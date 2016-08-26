@@ -7,6 +7,10 @@ After cloning this repo you will need to install the dependencies, run
 npm install && bower install
 ```
 
+## Documentation
+
+If you open `docs/main.html` in your browser you will see pretty documentation, rendered with [docco](https://jashkenas.github.io/docco/).
+
 ##Usage
 To run the project for development, run
 ```
