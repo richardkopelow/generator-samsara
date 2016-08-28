@@ -3,9 +3,7 @@ var chalk = require('chalk');
 
 module.exports = generators.Base.extend({
     initializing:function(){
-        console.log('Hey! Let me fetch the templates, one moment...');
-        this.spawnCommandSync('git',['clone','https://github.com/dmvaldman/samsara.git', this.templatePath('samsara')]);
-        this.spawnCommandSync('git',['-C',this.templatePath('samsara'),'pull']);
+        
 
     },
     prompting: function () {
@@ -51,6 +49,14 @@ module.exports = generators.Base.extend({
         }.bind(this));
    },
    writing: {
+       templates: function(){
+           console.log('Hey! Let me fetch the templates, one moment...');
+           if(!this.fs.exists(this.templatePath('samsara/package.json')))
+           {
+                this.spawnCommandSync('git',['clone','https://github.com/dmvaldman/samsara.git', this.templatePath('samsara')]);
+           }
+           this.spawnCommandSync('git',['-C',this.templatePath('samsara'),'pull']);
+       },
         app: function(){
             this.fs.copy(
                 this.templatePath('samsara/examples/'+this.config.get('example')),

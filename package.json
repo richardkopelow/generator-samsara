@@ -1,6 +1,6 @@
 {
   "name": "generator-samsara",
-  "version": "0.2.0",
+  "version": "0.2.7",
   "author": {
     "name": "Richard Kopelow",
     "email": "richardkopelow@gmail.com"
@@ -12,7 +12,8 @@
     "url": "git+https://github.com/richardkopelow/generator-samsara.git"
   },
   "files": [
-    "app"
+    "app",
+    "example"
   ],
   "keywords": [
     "yeoman-generator"
