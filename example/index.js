@@ -2,12 +2,7 @@ var generators = require('yeoman-generator');
 var chalk = require('chalk');
 
 module.exports = generators.Base.extend({
-    initializing:function(){
-        
-
-    },
     prompting: function () {
-        
         console.log('Making a Samsara project!');
         
         var prompts = [
@@ -26,20 +21,21 @@ module.exports = generators.Base.extend({
         ];
         if(!this.config.get('example'))
         {
-            prompts.unshift({
+            prompts.push({
                     type: 'list',
                     name: 'example',
                     message: 'Which example would you like?',
                     choices: [
                         'Logo',
                         'Cube',
-                        'Layouts',
+                        'Layouts/FlexLayout',
+                        'Layouts/HeaderFooterLayout',
+                        'Layouts/SequentialLayout',
                         'ParallaxCats',
                         'Carousel',
                         'SideMenu',
                         'SafariTabs',
                         'GoogleNow'
-
                     ]
                 });
         }
