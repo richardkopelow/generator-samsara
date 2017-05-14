@@ -3,20 +3,20 @@ Generator for generating Samsara projects
 
 This generator project is heavily influenced by generator-famous
 
-##Getting Started
+## Getting Started
 To use this generator, make sure you have npm installed, run
 ```
 npm install -g yo grunt-cli bower
 ```
 to install the necessary packages
 
-##Installing the generator
+## Installing the generator
 To add 'generator-samsara' to your system, run
 ```
 npm install -g generator-samsara
 ```
 
-##Generating your project
+## Generating your project
 Make a directory for the project and then enter
 ```
 mkdir samsaraProject
@@ -33,7 +33,7 @@ Available generators:
 
 **These generators must be run from the root directory of you project**
 
-##App
+## App
 Creates the Logo example. (you might want to start here)
 
 Example:    
@@ -41,7 +41,7 @@ Example:
     yo samsara
 ```
 
-##Example
+## Example
 Lets the user pick from a list of the Samsara examples.
 
 Example:    
@@ -49,10 +49,10 @@ Example:
 yo samsara:example
 ```
 
-##Features
+## Features
 * Setup basic project
 * Live-reloading dev server
 * One command to package your project for deployment
 
-##Samsara
+## Samsara
 Samsara can be found here: https://github.com/dmvaldman/samsara
